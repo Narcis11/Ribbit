@@ -2,6 +2,7 @@ package ro.ciclogetii.ribbit;
 
 import java.util.Locale;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -41,6 +42,12 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //just a stub - open the Login activity
+        Intent startLogin = new Intent(this,LoginActivity.class);
+        //the two flags instruct the system to clear the activity stack, which makes the Login activity our first activity.
+        startLogin.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startLogin.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(startLogin);
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
