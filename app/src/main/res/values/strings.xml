@@ -17,4 +17,10 @@
     <string name="signup_label">Sign up!</string>
     <string name="email_hint">Email</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
+
+    <!--Used in the sign up screen-->
+    <string name="invalid_sign_up_title">Watch out!</string>
+    <string name="invalid_sign_up_message">Please review the input fields.</string>
+    <string name="exception_sign_up_title">An error occurred</string>
+    <string name="exception_sign_up_message">Please try again later.</string>
 </resources>

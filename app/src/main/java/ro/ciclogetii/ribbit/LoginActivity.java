@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class LoginActivity extends ActionBarActivity {
@@ -14,6 +15,14 @@ public class LoginActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        TextView signUp = (TextView) findViewById(R.id.signUpText);
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent signUpIntent = new Intent(getApplicationContext(), SignUpActivity.class);
+                startActivity(signUpIntent);
+            }
+        });
     }
 
 
@@ -39,8 +48,4 @@ public class LoginActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void openSignUp(View v) {
-        Intent signUpIntent = new Intent(this, SignUpActivity.class);
-        startActivity(signUpIntent);
-    }
 }
